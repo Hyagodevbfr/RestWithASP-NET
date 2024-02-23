@@ -1,0 +1,86 @@
+[
+  {
+    "ContainingType": "RestWithASPNETUdemy_Calculator.Controllers.CalculatorController",
+    "Method": "GetDiv",
+    "RelativePath": "Calculator/Div/{firstNumber}/{secondNumber}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "firstNumber",
+        "Type": "System.String",
+        "IsRequired": true
+      },
+      {
+        "Name": "secondNumber",
+        "Type": "System.String",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "RestWithASPNETUdemy_Calculator.Controllers.CalculatorController",
+    "Method": "GetMult",
+    "RelativePath": "Calculator/Multi/{firstNumber}/{secondNumber}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "firstNumber",
+        "Type": "System.String",
+        "IsRequired": true
+      },
+      {
+        "Name": "secondNumber",
+        "Type": "System.String",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "RestWithASPNETUdemy_Calculator.Controllers.CalculatorController",
+    "Method": "GetSub",
+    "RelativePath": "Calculator/sub/{firstNumber}/{secondNumber}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "firstNumber",
+        "Type": "System.String",
+        "IsRequired": true
+      },
+      {
+        "Name": "secondNumber",
+        "Type": "System.String",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "RestWithASPNETUdemy_Calculator.Controllers.CalculatorController",
+    "Method": "GetSum",
+    "RelativePath": "Calculator/sum/{firstNumber}/{secondNumber}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "firstNumber",
+        "Type": "System.String",
+        "IsRequired": true
+      },
+      {
+        "Name": "secondNumber",
+        "Type": "System.String",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  }
+]
