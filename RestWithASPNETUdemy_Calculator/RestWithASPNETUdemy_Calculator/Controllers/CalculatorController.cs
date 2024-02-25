@@ -3,14 +3,9 @@ using Microsoft.AspNetCore.Mvc;
 namespace RestWithASPNETUdemy_Calculator.Controllers;
 [ApiController]
 [Route("[controller]")]
-public class CalculatorController: ControllerBase
+public class CalculatorController(ILogger<CalculatorController> logger): ControllerBase
 {
-    private readonly ILogger<CalculatorController> _logger;
-
-    public CalculatorController(ILogger<CalculatorController> logger)
-    {
-        _logger = logger;
-    }
+    private readonly ILogger<CalculatorController> _logger = logger;
 
     [HttpGet("sum/{firstNumber}/{secondNumber}")]
     public IActionResult GetSum(string firstNumber, string secondNumber)
@@ -75,19 +70,17 @@ public class CalculatorController: ControllerBase
         }
         return BadRequest("Invalid Input");
     }
-    private bool IsNumeric(string strNumber)
+    private static bool IsNumeric(string strNumber)
     {
-        double number;
         bool IsNumber = double.TryParse(
-            strNumber, System.Globalization.NumberStyles.Any,
-            System.Globalization.NumberFormatInfo.InvariantInfo, out number);
+            strNumber,System.Globalization.NumberStyles.Any,
+            System.Globalization.NumberFormatInfo.InvariantInfo,out double number);
         return IsNumber;
     }
 
-    private decimal ConvertToDecimal(string strNumber)
+    private static decimal ConvertToDecimal(string strNumber)
     {
-        decimal decimalValue;
-        if(decimal.TryParse(strNumber, out decimalValue))
+        if(decimal.TryParse(strNumber,out decimal decimalValue))
         {
             return decimalValue;
         }
