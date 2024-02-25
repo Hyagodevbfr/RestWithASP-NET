@@ -43,6 +43,22 @@
   },
   {
     "ContainingType": "RestWithASPNETUdemy_Calculator.Controllers.CalculatorController",
+    "Method": "GetSquareRoot",
+    "RelativePath": "Calculator/sqrt/{firstNumber}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "firstNumber",
+        "Type": "System.String",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "RestWithASPNETUdemy_Calculator.Controllers.CalculatorController",
     "Method": "GetSub",
     "RelativePath": "Calculator/sub/{firstNumber}/{secondNumber}",
     "HttpMethod": "GET",

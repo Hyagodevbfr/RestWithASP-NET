@@ -56,11 +56,22 @@ public class CalculatorController: ControllerBase
         }
         return BadRequest("Invalid Input");
     }
+    public IActionResult Mean(string firstNumber, string secondNumber)
+    {
+        if (IsNumeric(firstNumber) && IsNumeric(secondNumber))
+        {
+            var mean = (ConvertToDecimal(firstNumber) + ConvertToDecimal(secondNumber)) / 2;
+            return Ok(mean.ToString( ));
+        }
+        return BadRequest("Invalid Input");
+    }
+    [HttpGet("sqrt/{firstNumber}")]
     public IActionResult GetSquareRoot(string firstNumber)
     {
         if (IsNumeric(firstNumber))
         {
-            var squareRoot = Math.Sqrt(firstNumber)
+            var squareRoot = Math.Sqrt((double)ConvertToDecimal(firstNumber));
+            return Ok(squareRoot.ToString( ));
         }
         return BadRequest("Invalid Input");
     }
